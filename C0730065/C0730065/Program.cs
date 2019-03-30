@@ -12,19 +12,22 @@ namespace C0730065
         static void Main(string[] args)
         {
             {
-               
+
                 Console.WriteLine("Downloading file");
                 Download();
                 Console.ReadLine();
-          }
+            }
 
         }
         static void Download()
         {
-            Thread.Sleep(3000);
-            Console.WriteLine("Download complete");
-            Thread.Sleep(7000);
-        }
+            Task.Run(() =>
+            {
+                Thread.Sleep(3000);
+                Console.WriteLine("Download complete");
+                
+            });
 
+        }
     }
 }
