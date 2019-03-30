@@ -12,15 +12,10 @@ namespace C0730065
         static void Main(string[] args)
         {
             {
-                HelloWorld hw = new HelloWorld();
-                hw.Hello();
-            }
-        }
-        class HelloWorld
-        {
-            public void Hello()
-            {
-                Console.WriteLine("Hello World");
+               
+                Console.WriteLine("Downloading file");
+                Download();
+                Console.ReadLine();
           }
 
         }
@@ -28,6 +23,7 @@ namespace C0730065
         {
             Thread.Sleep(3000);
             Console.WriteLine("Download complete");
+            Thread.Sleep(7000);
         }
 
     }
