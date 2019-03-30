@@ -28,12 +28,17 @@ namespace C0730065
         }
         class Network
         {
-            ArrayList WebPageContent = new ArrayList();
+           static ArrayList WebPageContents = new ArrayList();
+            private static object i;
+
             public static async Task Download() { 
             HttpClient client = new HttpClient();
             String data =  await client.GetStringAsync("http://torontopubliclibrary.ca");
-                Console.WriteLine(data);
-                foreach (String line in data) ;
+              //  Console.WriteLine(data);
+                foreach (var i in data);
+                {
+                    WebPageContents.Add(i);
+                }
         }
         }
     }
